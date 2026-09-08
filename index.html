@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROVENOOK Outdoor - Your Corner in the Wild</title>
+    <meta name="description" content="ROVENOOK Outdoor - Premium camping mats and foldable storage boxes for outdoor enthusiasts. Wholesale available for Australian and New Zealand retailers.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3436;
+            line-height: 1.6;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            background: #1a3a2a;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #a8d5ba;
+        }
+        
+        /* Hero区域 */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 42, 0.75), rgba(26, 58, 42, 0.75)), 
+                        url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1920&q=80') center/cover;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            font-weight: 300;
+        }
+        
+        .hero p {
+            font-size: 28px;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .hero-btn {
+            background: #a8d5ba;
+            color: #1a3a2a;
+            padding: 15px 45px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            border-radius: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .hero-btn:hover {
+            background: #8bc49f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* 产品展示区 */
+        .products {
+            padding: 80px 50px;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #1a3a2a;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #636e72;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .product-image-1 {
+            background-image: url('https://images.unsplash.com/photo-1537565266759-34bbc16be345?w=600&q=80');
+        }
+        
+        .product-image-2 {
+            background-image: url('https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600&q=80');
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .product-info {
+            padding: 30px;
+        }
+        
+        .product-info h3 {
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #1a3a2a;
+            font-weight: 600;
+        }
+        
+        .product-info p {
+            color: #636e72;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .product-features li {
+            padding: 6px 0;
+            color: #2d3436;
+            font-size: 15px;
+        }
+        
+        .product-features li::before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .product-btn {
+            display: inline-block;
+            background: #1a3a2a;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .product-btn:hover {
+            background: #2d5a3f;
+            transform: translateY(-2px);
+        }
+        
+        /* 品牌故事区 */
+        .brand-story {
+            padding: 100px 50px;
+            background: #1a3a2a;
+            color: white;
+            text-align: center;
+        }
+        
+        .brand-story h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .brand-story p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 25px;
+            line-height: 1.9;
+            color: #dfe6e9;
+            font-weight: 300;
+        }
+        
+        .brand-story .slogan {
+            font-style: italic;
+            color: #a8d5ba;
+            margin-top: 40px;
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+        
+        /* 优势区 */
+        .advantages {
+            padding: 80px 50px;
+            background: white;
+        }
+        
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .advantage-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .advantage-card:hover {
+            background: #f8f9fa;
+        }
+        
+        .advantage-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .advantage-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1a3a2a;
+            font-weight: 600;
+        }
+        
+        .advantage-card p {
+            color: #636e72;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* CTA区域 */
+        .cta {
+            padding: 80px 50px;
+            background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3f 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #dfe6e9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn-primary {
+            background: #a8d5ba;
+            color: #1a3a2a;
+            padding: 15px 40px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .cta-btn-primary:hover {
+            background: #8bc49f;
+            transform: translateY(-2px);
+        }
+        
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 40px;
+            border: 2px solid white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #1a3a2a;
+        }
+        
+        /* 页脚 */
+        .footer {
+            background: #0d1f15;
+            color: white;
+            padding: 60px 50px 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #a8d5ba;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #b2bec3;
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: block;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #2d5a3f;
+            color: #636e72;
+            font-size: 14px;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
+            
+            .products, .brand-story, .advantages, .cta {
+                padding: 60px 20px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">ROVENOOK</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#wholesale">Wholesale</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero" id="home">
+        <h1>ROVENOOK</h1>
+        <p>Your Corner in the Wild</p>
+        <a href="#products" class="hero-btn">Explore Our Products</a>
+    </section>
+
+    <!-- 产品展示区 -->
+    <section class="products" id="products">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Durable, practical outdoor gear designed for camping, 4WD, and caravan adventures</p>
+        <div class="product-grid">
+            <!-- 产品1：地垫 -->
+            <div class="product-card">
+                <div class="product-image product-image-1">
+                    <span class="product-badge">BEST SELLER</span>
+                </div>
+                <div class="product-info">
+                    <h3>PP Outdoor Camping Mat</h3>
+                    <p>Heavy-duty waterproof mat for all your outdoor adventures. Perfect for camping, picnics, and beach trips.</p>
+                    <ul class="product-features">
+                        <li>450gsm premium PP material</li>
+                        <li>100% waterproof & UV-resistant</li>
+                        <li>Easy to clean — just hose down</li>
+                        <li>12 standard sizes available</li>
+                        <li>GRS certified recycled material</li>
+                    </ul>
+                    <a href="#contact" class="product-btn">Request Quote</a>
+                </div>
+            </div>
+
+            <!-- 产品2：收纳箱 -->
+            <div class="product-card">
+                <div class="product-image product-image-2">
+                    <span class="product-badge">NEW</span>
+                </div>
+                <div class="product-info">
+                    <h3>Foldable Storage Box</h3>
+                    <p>Stackable, foldable storage for camping, 4WD, caravan, and home use. Saves 70% space when folded.</p>
+                    <ul class="product-features">
+                        <li>65kg load capacity per box</li>
+                        <li>Folds flat to only 6.5-7.5cm</li>
+                        <li>3 sizes: 15L, 30L, 50L</li>
+                        <li>Optional wooden lid (15kg load)</li>
+                        <li>4 colors available</li>
+                    </ul>
+                    <a href="#contact" class="product-btn">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌故事区 -->
+    <section class="brand-story" id="about">
+        <h2>About ROVENOOK</h2>
+        <p>ROVENOOK was born from a passion for the outdoors and a belief that quality camping gear should be accessible to everyone.</p>
+        <p>We work with GRS-certified manufacturers to bring you durable, practical products that enhance your outdoor experience — whether you're camping, 4WDing, caravanning, or just enjoying time in nature.</p>
+        <p>Our name comes from "Rove" (to wander and explore) and "Nook" (a cozy corner) — because we believe everyone deserves their own corner in the wild.</p>
+        <p class="slogan">"Your Corner in the Wild"</p>
+    </section>
+
+    <!-- 优势区 -->
+    <section class="advantages" id="wholesale">
+        <h2 class="section-title">Why Choose ROVENOOK</h2>
+        <p class="section-subtitle">We make it easy for retailers to stock quality outdoor gear</p>
+        <div class="advantage-grid">
+            <div class="advantage-card">
+                <div class="advantage-icon">🏭</div>
+                <h3>GRS-Certified Factory</h3>
+                <p>We partner with certified manufacturers ensuring quality and sustainability.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">💰</div>
+                <h3>Competitive Pricing</h3>
+                <p>Direct from factory pricing gives you healthy margins for your business.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">🚢</div>
+                <h3>Global Shipping</h3>
+                <p>We ship worldwide with reliable logistics partners to Australia & New Zealand.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">🤝</div>
+                <h3>OEM & ODM Available</h3>
+                <p>Custom colors, branding and packaging available for bulk orders (1000+ pcs).</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">📦</div>
+                <h3>Low MOQ</h3>
+                <p>Start small with our low minimum order quantities — perfect for growing retailers.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon">⚡</div>
+                <h3>Fast Response</h3>
+                <p>We reply to all enquiries within 24 hours. Your business is our priority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="cta" id="contact">
+        <h2>Ready to Stock ROVENOOK?</h2>
+        <p>Contact us today for wholesale pricing and product samples. We'd love to partner with your business.</p>
+        <div class="cta-buttons">
+            <a href="mailto:sales@rovenook.com" class="cta-btn-primary">Email Us</a>
+            <a href="https://wa.me/8617652489230" target="_blank" class="cta-btn-secondary">WhatsApp Us</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ROVENOOK Outdoor</h4>
+                <p>Your Corner in the Wild</p>
+                <p>Quality camping gear for outdoor enthusiasts.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#about">About Us</a>
+                <a href="#wholesale">Wholesale</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>📧 sales@rovenook.com</p>
+                <p>💬 WhatsApp: +86 176 5248 9230</p>
+                <p>🌐 www.rovenook.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ROVENOOK Outdoor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
