@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROVENOOK Outdoor - Premium Camping Gear for Australia & New Zealand</title>
-    <meta name="description" content="ROVENOOK Outdoor - Premium PP camping mats and foldable storage boxes. GRS certified, wholesale available for Australian and New Zealand retailers.">
+    <title>ROVENOOK Outdoor - Premium Camping & Outdoor Gear</title>
+    <meta name="description" content="ROVENOOK Outdoor - Premium outdoor gear for camping, 4WD, and caravan. Wholesale available for retailers worldwide.">
     
     <!-- Google tag (gtag.js) - GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VVXJ8ED1G"></script>
@@ -458,31 +458,190 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
         
-        /* 品牌故事区 */
-        .brand-story {
+        /* About Us区 */
+        .about-section {
             background: var(--bg-light);
         }
         
-        .story-content {
-            max-width: 800px;
+        .about-container {
+            max-width: 1000px;
             margin: 0 auto;
-            text-align: center;
         }
         
-        .story-content p {
-            font-size: 17px;
-            margin-bottom: 25px;
-            color: var(--text-medium);
-            line-height: 1.9;
+        .about-block {
+            margin-bottom: 50px;
         }
         
-        .story-slogan {
+        .about-block:last-child {
+            margin-bottom: 0;
+        }
+        
+        .about-heading {
             font-size: 24px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+            display: inline-block;
+        }
+        
+        .about-text {
+            font-size: 16px;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .about-text:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Philosophy卡片 */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .philosophy-card {
+            background: var(--bg-white);
+            padding: 30px 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--primary-medium);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .philosophy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .philosophy-number {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-medium);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .philosophy-card h4 {
+            font-size: 17px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .philosophy-card p {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+        
+        /* Why Choose列表 */
+        .why-list {
+            margin-top: 20px;
+        }
+        
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 18px 20px;
+            background: var(--bg-white);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .why-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .why-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .why-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .why-content strong {
+            display: block;
+            font-size: 16px;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .why-content p {
+            font-size: 14px;
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* About Contact */
+        .about-contact {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--primary-medium);
+        }
+        
+        .contact-info-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+        }
+        
+        .contact-item a, .contact-item span {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--primary-medium);
+        }
+        
+        .about-slogan {
+            text-align: center;
+            font-size: 18px;
             font-style: italic;
             color: var(--primary-dark);
-            margin-top: 40px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--bg-light);
             font-weight: 300;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         
         /* 优势区 */
@@ -684,6 +843,28 @@
                 width: 100%;
                 max-width: 280px;
             }
+            
+            /* About Us响应式 */
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info-inline {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .about-contact {
+                padding: 25px 20px;
+            }
+            
+            .about-heading {
+                font-size: 20px;
+            }
+            
+            .why-item {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -705,7 +886,7 @@
     <section class="hero" id="home">
         <h1>ROVENOOK</h1>
         <p class="slogan">Your Corner in the Wild</p>
-        <p class="subtitle">Premium outdoor gear for camping, 4WD, and caravan adventures. Wholesale available for Australia & New Zealand retailers.</p>
+        <p class="subtitle">Premium outdoor gear for camping, 4WD, and caravan adventures. Wholesale available for retailers worldwide.</p>
         <div class="hero-buttons">
             <a href="#products" class="btn-primary">View Products</a>
             <a href="#contact" class="btn-secondary">Get a Quote</a>
@@ -715,7 +896,7 @@
     <!-- 产品展示区 -->
     <section class="section products" id="products">
         <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">Durable, practical outdoor gear designed for the harsh Australian and New Zealand conditions</p>
+        <p class="section-subtitle">Durable, practical outdoor gear designed for real outdoor conditions</p>
         <div class="product-grid">
             <!-- 产品1：地垫 -->
             <div class="product-card">
@@ -933,15 +1114,110 @@
         </div>
     </section>
 
-    <!-- 品牌故事区 -->
-    <section class="section brand-story" id="about">
+    <!-- About Us区 -->
+    <section class="section about-section" id="about">
         <h2 class="section-title">About ROVENOOK</h2>
-        <p class="section-subtitle">Born from a passion for the outdoors</p>
-        <div class="story-content">
-            <p>ROVENOOK was born from a passion for the outdoors and a belief that quality camping gear should be accessible to everyone.</p>
-            <p>Our name comes from "Rove" (to wander and explore) and "Nook" (a cozy corner) — because we believe everyone deserves their own corner in the wild.</p>
-            <p>We work with certified manufacturers to bring you durable, practical products that enhance your outdoor experience — whether you're camping, 4WDing, caravanning, or just enjoying time in nature.</p>
-            <p class="story-slogan">"Your Corner in the Wild"</p>
+        <p class="section-subtitle">Your Corner in the Wild</p>
+        
+        <div class="about-container">
+            <!-- Who We Are -->
+            <div class="about-block">
+                <h3 class="about-heading">Who We Are</h3>
+                <p class="about-text">ROVENOOK Outdoor is a China-based supplier specializing in practical, high-quality outdoor products.</p>
+                <p class="about-text">Our team brings years of experience in international trade and outdoor product sourcing. We understand what retailers need: durable products, fair pricing, and reliable supply.</p>
+            </div>
+            
+            <!-- Our Mission -->
+            <div class="about-block">
+                <h3 class="about-heading">Our Mission</h3>
+                <p class="about-text">We help outdoor retailers source well-made, practical products directly from trusted Chinese factories — ensuring competitive pricing and consistent quality.</p>
+                <p class="about-text">We began our journey in the Australian and New Zealand markets, with a focus on gear that stands up to the outback, solves everyday storage challenges, and enhances camping and 4WD experiences.</p>
+            </div>
+            
+            <!-- Our Philosophy -->
+            <div class="about-block">
+                <h3 class="about-heading">Our Philosophy</h3>
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-number">1</div>
+                        <h4>Practicality Over Flash</h4>
+                        <p>Every product solves a real problem.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-number">2</div>
+                        <h4>Quality You Can Trust</h4>
+                        <p>We work with verified factories and conduct quality testing before shipment. We don't ship anything we wouldn't use ourselves.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <div class="philosophy-number">3</div>
+                        <h4>Partnership Over Transaction</h4>
+                        <p>We build long-term relationships, not one-off orders.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why Choose ROVENOOK -->
+            <div class="about-block">
+                <h3 class="about-heading">Why Choose ROVENOOK</h3>
+                <div class="why-list">
+                    <div class="why-item">
+                        <span class="why-icon">🏭</span>
+                        <div class="why-content">
+                            <strong>Direct Factory Access</strong>
+                            <p>Competitive pricing, consistent quality. No unnecessary markups.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-icon">📦</span>
+                        <div class="why-content">
+                            <strong>Small-Batch Friendly</strong>
+                            <p>Low MOQs, perfect for testing new products.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-icon">🎨</span>
+                        <div class="why-content">
+                            <strong>Custom Branding</strong>
+                            <p>Logo printing, private label, custom packaging.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-icon">🎯</span>
+                        <div class="why-content">
+                            <strong>Market-Focused Design</strong>
+                            <p>Products selected and designed for real outdoor conditions and practical needs.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <span class="why-icon">⚡</span>
+                        <div class="why-content">
+                            <strong>Fast Communication</strong>
+                            <p>We respond within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Get in Touch -->
+            <div class="about-block about-contact">
+                <h3 class="about-heading">Get in Touch</h3>
+                <p class="about-text">Have questions about our products, pricing, or custom branding? We'd love to hear from you.</p>
+                <div class="contact-info-inline">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <a href="mailto:sales@rovenook.com">sales@rovenook.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <a href="https://wa.me/8617652489230" target="_blank">WhatsApp: +86 176 5248 9230</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <span>www.rovenook.com</span>
+                    </div>
+                </div>
+                <p class="about-slogan">ROVENOOK Outdoor — Your Corner in the Wild.</p>
+            </div>
         </div>
     </section>
 
@@ -958,7 +1234,7 @@
             <div class="advantage-card">
                 <div class="advantage-icon">🚢</div>
                 <h3>Global Shipping</h3>
-                <p>We ship worldwide with reliable logistics partners to Australia & New Zealand.</p>
+                <p>We ship worldwide with reliable logistics partners.</p>
             </div>
             <div class="advantage-card">
                 <div class="advantage-icon">🤝</div>
@@ -999,7 +1275,7 @@
             <div class="footer-section">
                 <h4>ROVENOOK Outdoor</h4>
                 <p>Your Corner in the Wild</p>
-                <p>Quality camping gear for outdoor enthusiasts in Australia & New Zealand.</p>
+                <p>Practical outdoor gear for every adventure.</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
